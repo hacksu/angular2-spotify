@@ -11,15 +11,24 @@ class Artist
 
   Artist(this.id, this.name, this.genres, this.followers, this.popularity, this.url, this.uri, this.imageUrl);
 
-  factory Artist.fromJson(Map<String, dynamic> artist) =>
-    new Artist(artist['id'], 
+  factory Artist.fromJson(Map<String, dynamic> artist)
+  {
+    var images = artist['images'];
+    var imageUrl = '';
+    if(images.length != 0)
+    {
+      imageUrl = images[0]['url'];
+    }
+    
+    return new Artist(artist['id'], 
                artist['name'], 
                artist['genres'], 
                artist['followers']['total'], 
                artist['popularity'],
                artist['href'],
                artist['uri'],
-               artist['images'][0]['url']);
+               imageUrl);
+  }
 
   Map toJson() => {'id': id, 
                    'name': name,
