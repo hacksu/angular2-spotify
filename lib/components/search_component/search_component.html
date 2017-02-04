@@ -1,11 +1,4 @@
 <section>
-    <div>
-        <input #query />
-        <select #type>
-            <option value="artist">Artist</option>
-            <option value="album">Album</option>
-            <option value="track">Song</option>
-        </select>
-    </div>
-    <button (click)="search(query.value, type.value); query.value=''">Go</button>
+    <input #query placeholder="Search artists" />
+    <button (click)="search(query.value); query.value=''">Go</button>
 </section>
