@@ -2,3 +2,10 @@
     <input #query placeholder="Search artists" />
     <button (click)="search(query.value); query.value=''">Go</button>
 </section>
+<section>
+    <ul>
+        <li *ngFor="let artist of artists">
+            {{artist.name}}
+        </li>
+    </ul>
+</section>
