@@ -4,12 +4,10 @@ class Artist
   String name;
   List<String> genres;
   int followers;
-  int popularity;
   String url;
-  String uri;
   String imageUrl;
 
-  Artist(this.id, this.name, this.genres, this.followers, this.popularity, this.url, this.uri, this.imageUrl);
+  Artist(this.id, this.name, this.genres, this.followers, this.url, this.imageUrl);
 
   factory Artist.fromJson(Map<String, dynamic> artist)
   {
@@ -19,14 +17,15 @@ class Artist
     {
       imageUrl = images[0]['url'];
     }
+
+    var externalUrl = artist['external_urls']['spotify'].toString();
+    var fixedUrl = externalUrl.replaceFirst("open", "play");
     
     return new Artist(artist['id'], 
                artist['name'], 
                artist['genres'], 
                artist['followers']['total'], 
-               artist['popularity'],
-               artist['href'],
-               artist['uri'],
+               fixedUrl,
                imageUrl);
   }
 
@@ -34,8 +33,6 @@ class Artist
                    'name': name,
                    'genres': genres,
                    'followers': followers,
-                   'popularity': popularity,
                    'url': url,
-                   'uri': uri,
                    'imageUrl': imageUrl};
 }
