@@ -7,13 +7,13 @@ import 'package:http/http.dart';
 import '../models/artist.dart';
 
 @Injectable()
-class SearchService
+class SpotifySearchService
 {
   static const _searchUrl = "https://api.spotify.com/v1/search?q=";
 
   final Client _http;
 
-  SearchService(this._http);
+  SpotifySearchService(this._http);
 
   Future<List<Artist>> search(String query) async
   {
