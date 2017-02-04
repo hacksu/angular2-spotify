@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
+import '../../models/artist.dart';
 import '../../services/search_service.dart';
 
 @Component(
@@ -13,13 +14,22 @@ import '../../services/search_service.dart';
 
 class SearchComponent implements OnInit
 {
+  List<Artist> artists;
+
   final SearchService _searchService;
   final Router _router;  
 
   SearchComponent(this._searchService, this._router);
 
+  @override
+  Future<Null> ngOnInit() async
+  {
+    artists = new List<Artist>();
+  }
+
   Future<Null> search(String query) async
   {
-    print("Query: " + query);
+    var fixedQuery = query.replaceAll(" ", "+");
+    artists = await _searchService.search(fixedQuery);
   }
 }
