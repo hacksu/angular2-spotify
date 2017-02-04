@@ -9,7 +9,7 @@ import '../models/artist.dart';
 @Injectable()
 class SearchService
 {
-  static const _searchUrl = 'https://api.spotify.com/v1/search?q=';
+  static const _searchUrl = "https://api.spotify.com/v1/search?q=";
 
   final Client _http;
 
@@ -17,8 +17,7 @@ class SearchService
 
   Future<List<Artist>> search(String query) async
   {
-    var fixedQuery = query.replaceAll(' ', '+');
-    var url = _searchUrl + fixedQuery + "&type=artist&offset=0&limit=20";
+    var url = _searchUrl + query + "&type=artist&offset=0&limit=20";
 
     try
     {
