@@ -4,23 +4,23 @@ import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
 import '../../models/artist.dart';
-import '../../services/search_service.dart';
+import '../../services/spotify_search_service.dart';
 
 @Component(
   selector: 'search',
   templateUrl: 'search_component.html',
   styleUrls: const ['search_component.css'],
-  providers: [SearchService]
+  providers: const [SpotifySearchService]
 )
 
 class SearchComponent implements OnInit
 {
   List<Artist> artists;
 
-  final SearchService _searchService;
+  final SpotifySearchService _spotifySearchService;
   final Router _router;  
 
-  SearchComponent(this._searchService, this._router);
+  SearchComponent(this._spotifySearchService, this._router);
 
   @override
   Future<Null> ngOnInit() async
@@ -31,6 +31,6 @@ class SearchComponent implements OnInit
   Future<Null> search(String query) async
   {
     var fixedQuery = query.replaceAll(" ", "+");
-    artists = await _searchService.search(fixedQuery);
+    artists = await _spotifySearchService.search(fixedQuery);
   }
 }
