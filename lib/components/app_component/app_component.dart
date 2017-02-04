@@ -1,6 +1,8 @@
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
+import '../search_component/search_component.dart';
+
 @Component(
   selector: 'spotify-app',
   templateUrl: 'app_component.html',
@@ -10,7 +12,12 @@ import 'package:angular2/router.dart';
 )
 
 @RouteConfig(const [
-  
+  const Route(
+    path: '/',
+    name: 'Search',
+    component: SearchComponent,
+    useAsDefault: true
+  )
 ])
 
 class AppComponent {
