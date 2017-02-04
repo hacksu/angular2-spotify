@@ -35,7 +35,7 @@ class SpotifySearchService
   }
 }
 
-dynamic _extractData(Response resp) => JSON.decode(resp.body)['artists'].items;
+dynamic _extractData(Response resp) => JSON.decode(resp.body)['artists']['items'];
   
 Exception _handleError(dynamic e) {
   return new Exception('Server error; cause: $e');

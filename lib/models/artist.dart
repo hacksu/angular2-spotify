@@ -14,7 +14,7 @@ class Artist
     new Artist(artist['id'], 
                artist['name'], 
                artist['genres'], 
-               artist['followers'].total, 
+               artist['followers']['total'], 
                artist['popularity'],
                artist['href'],
                artist['uri']);
