@@ -5,7 +5,10 @@
 <section>
     <ul>
         <li *ngFor="let artist of artists">
-            {{artist.name}}
+            <div>
+                <h2>{{artist.name}}</h2>
+                <img src="{{artist.imageUrl}}" />
+            </div>
         </li>
     </ul>
 </section>
