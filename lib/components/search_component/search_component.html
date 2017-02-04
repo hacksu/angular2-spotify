@@ -8,6 +8,12 @@
             <div>
                 <h2>{{artist.name}}</h2>
                 <img src="{{artist.imageUrl}}" />
+                <div>Followers: {{artist.followers | number}}</div>
+                <div>
+                    Genres:
+                    <span *ngFor="let genre of artist.genres">{{genre}} </span>
+                </div>
+                <a href="{{artist.url}}" target="_blank">Open in Spotify</a>
             </div>
         </li>
     </ul>
