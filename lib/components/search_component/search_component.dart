@@ -9,7 +9,8 @@ import '../../services/search_service.dart';
 @Component(
   selector: 'search',
   templateUrl: 'search_component.html',
-  styleUrls: const [SearchService, 'search_component.css']
+  styleUrls: const ['search_component.css'],
+  providers: [SearchService]
 )
 
 class SearchComponent implements OnInit
