@@ -13,8 +13,10 @@
                 <img src="{{artist.imageUrl}}" />
                 <div class="info">
                     <h3>{{artist.name}}</h3>
-                    <div>Followers: {{artist.followers | number}}</div>
-                    <a href="{{artist.url}}" target="_blank">Open in Spotify</a>
+                    <div class="details">
+                        <div><b>Followers:</b> {{artist.followers | number}}</div>
+                        <a href="{{artist.url}}" target="_blank">Open in Spotify</a>
+                    </div>
                 </div>
             </li>
         </ul>

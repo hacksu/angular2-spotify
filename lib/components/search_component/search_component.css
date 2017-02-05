@@ -53,3 +53,14 @@
 .result a{
     color: #1DB954;
 }
+.result .info{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.result .info h3{
+    font-size: 1.25em;
+    align-self: center;
+}
