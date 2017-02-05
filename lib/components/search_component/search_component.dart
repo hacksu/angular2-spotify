@@ -30,7 +30,10 @@ class SearchComponent implements OnInit
 
   Future<Null> search(String query) async
   {
-    var fixedQuery = query.replaceAll(" ", "+");
-    artists = await _spotifySearchService.search(fixedQuery);
+    if(query.isNotEmpty)
+    {
+      var fixedQuery = query.replaceAll(" ", "+");
+      artists = await _spotifySearchService.search(fixedQuery);
+    }
   }
 }
