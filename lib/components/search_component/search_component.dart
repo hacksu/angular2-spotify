@@ -25,7 +25,7 @@ class SearchComponent implements OnInit
   @override
   Future<Null> ngOnInit() async
   {
-    artists = new List<Artist>();
+    artists = null;
   }
 
   Future<Null> search(String query) async
