@@ -1,7 +1,9 @@
 <section>
     <h2>Search</h2>
-    <input #query placeholder="Artist name" />
-    <button (click)="search(query.value); query.value=''">Go</button>
+    <div class="search">
+        <input id="search-query" placeholder="Artist Name" #query />
+        <button (click)="search(query.value); query.value=''">Go</button>
+    </div>
 </section>
 <section *ngIf="artists != null">
     <div *ngIf="artists.length > 0">
