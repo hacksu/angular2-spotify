@@ -6,16 +6,12 @@
 <section *ngIf="artists != null">
     <div *ngIf="artists.length > 0">
         <h2>Results</h2>
-        <ul>
-            <li *ngFor="let artist of artists">
-                <div>
-                    <img src="{{artist.imageUrl}}" />
+        <ul class="results">
+            <li class="result" *ngFor="let artist of artists">
+                <img src="{{artist.imageUrl}}" />
+                <div class="info">
                     <h3>{{artist.name}}</h3>
                     <div>Followers: {{artist.followers | number}}</div>
-                    <div>
-                        Genres:
-                        <span *ngFor="let genre of artist.genres">{{genre}} </span>
-                    </div>
                     <a href="{{artist.url}}" target="_blank">Open in Spotify</a>
                 </div>
             </li>
