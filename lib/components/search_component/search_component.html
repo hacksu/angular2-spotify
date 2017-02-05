@@ -1,20 +1,27 @@
 <section>
-    <input #query placeholder="Search artists" />
+    <h2>Search</h2>
+    <input #query placeholder="Artist name" />
     <button (click)="search(query.value); query.value=''">Go</button>
 </section>
-<section>
-    <ul>
-        <li *ngFor="let artist of artists">
-            <div>
-                <h2>{{artist.name}}</h2>
-                <img src="{{artist.imageUrl}}" />
-                <div>Followers: {{artist.followers | number}}</div>
+<section *ngIf="artists != null">
+    <div *ngIf="artists.length > 0">
+        <h2>Results</h2>
+        <ul>
+            <li *ngFor="let artist of artists">
                 <div>
-                    Genres:
-                    <span *ngFor="let genre of artist.genres">{{genre}} </span>
+                    <img src="{{artist.imageUrl}}" />
+                    <h3>{{artist.name}}</h3>
+                    <div>Followers: {{artist.followers | number}}</div>
+                    <div>
+                        Genres:
+                        <span *ngFor="let genre of artist.genres">{{genre}} </span>
+                    </div>
+                    <a href="{{artist.url}}" target="_blank">Open in Spotify</a>
                 </div>
-                <a href="{{artist.url}}" target="_blank">Open in Spotify</a>
-            </div>
-        </li>
-    </ul>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="artists.length == 0">
+        No results found
+    </div>
 </section>
