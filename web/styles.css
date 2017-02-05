@@ -14,15 +14,9 @@ section{
     padding: 8px;
 }
 a{
-    font-size: 1.2em;
     text-decoration: none;
-    color: white;
 }
-a:hover{
-    color: #191414;
-    cursor: pointer;
-}
-input:hover, button:hover{
+input:hover, button:hover, a:hover{
     cursor: pointer;
 }
 h2{

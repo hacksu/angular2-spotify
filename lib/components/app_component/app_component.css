@@ -12,3 +12,10 @@ header{
 header nav{
     margin-left: 50px;
 }
+header nav a{
+    font-size: 1.2em;
+    color: white;
+}
+header nav a:hover{
+    color: #191414;
+}
