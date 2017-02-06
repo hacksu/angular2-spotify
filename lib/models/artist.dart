@@ -28,11 +28,4 @@ class Artist
                fixedUrl,
                imageUrl);
   }
-
-  Map toJson() => {'id': id, 
-                   'name': name,
-                   'genres': genres,
-                   'followers': followers,
-                   'url': url,
-                   'imageUrl': imageUrl};
 }
