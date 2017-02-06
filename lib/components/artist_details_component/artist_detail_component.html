@@ -1,4 +1,5 @@
 <section *ngIf="artist != null">
+    <img src="{{artist.imageUrl}}" />
     <h2>{{artist.name}}</h2>
 </section>
 <section *ngIf="albums != null">
@@ -8,9 +9,7 @@
             <img src="{{album.imageUrl}}" />
             <div class="info">
                 <h3>{{album.name}}</h3>
-                <div class="details">
-                    <a href="{{artist.url}}" target="_blank">Open in Spotify</a>
-                </div>
+                <a href="{{album.url}}" target="_blank">Open in Spotify</a>
             </div>
         </li>
     </ul>

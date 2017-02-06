@@ -27,3 +27,9 @@
 .albums .album .info > h3{
     margin: 0;
 }
+.albums .album .info a{
+    color: #1DB954; 
+}
+.albums .album .info a:hover{
+    color: #191414;
+}

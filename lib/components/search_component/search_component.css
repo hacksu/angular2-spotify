@@ -55,6 +55,9 @@
 .results .result a{
     color: #1DB954;
 }
+.results .result a:hover{
+    color: #191414;
+}
 .results .result .info{
     display: flex;
     flex-direction: column;
