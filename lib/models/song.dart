@@ -1,3 +1,5 @@
+import '../helpers/json_helper.dart';
+
 class Song
 {
   String id;
@@ -9,19 +11,12 @@ class Song
 
   factory Song.fromJson(Map<String, dynamic> song)
   {
-    var images = song['images'];
-    var imageUrl = '';
-    if(images.length != 0)
-    {
-      imageUrl = images[0]['url'];
-    }
-
-    var externalUrl = song['external_urls']['spotify'].toString();
-    var fixedUrl = externalUrl.replaceFirst("open", "play");
+    var externalUrl = JsonHelper.getExternalUrl(song);
+    var imageUrl = JsonHelper.getImageUrl(song);
 
     return new Song(song['id'],
       song['name'],
-      fixedUrl,
+      externalUrl,
       imageUrl
     );
   }
