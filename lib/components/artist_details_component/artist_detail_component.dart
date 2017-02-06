@@ -31,10 +31,10 @@ class ArtistDetailComponent implements OnInit
   @override
   Future<Null> ngOnInit() async
   {
-    var _id = _routeParams.get('id');
-    artist = await _spotifyArtistDetailService.getArtistInfo(_id);
-    albums = await _spotifyArtistDetailService.getArtistAlbums(_id);
-    songs = await _spotifyArtistDetailService.getArtistTopSongs(_id);
+    var routeId = _routeParams.get('id');
+    artist = await _spotifyArtistDetailService.getArtistInfo(routeId);
+    albums = await _spotifyArtistDetailService.getArtistAlbums(routeId);
+    songs = await _spotifyArtistDetailService.getArtistTopSongs(routeId);
   }
 
   void goBack() => _location.back();
