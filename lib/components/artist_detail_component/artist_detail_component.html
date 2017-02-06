@@ -47,7 +47,10 @@
         <ul class="songs">
             <li class="song" *ngFor="let song of songs">
                 <h3>{{song.name}}</h3>
-                <a href="{{song.url}}" target="_blank">Open in Spotify</a>
+                <a href="{{song.url}}" target="_blank">
+                    <i class="fa fa-spotify"></i>
+                    Open in Spotify
+                </a>
             </li>
         </ul>
     </div>

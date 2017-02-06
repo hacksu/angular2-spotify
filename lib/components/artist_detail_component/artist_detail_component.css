@@ -96,6 +96,9 @@
     margin-right: 2px;
 }
 .songs .song{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 75px;
     width: 32.8%;
 }
