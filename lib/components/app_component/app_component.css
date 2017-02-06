@@ -1,8 +1,11 @@
 header{
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
     padding: 8px;
-    margin-bottom: 20px;
     background-color: #1DB954;
     color: white;
     box-shadow: 
@@ -22,4 +25,7 @@ header nav a{
 }
 header nav a:hover{
     color: #191414;
+}
+div.content{
+    margin-top: 80px;
 }
