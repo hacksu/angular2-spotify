@@ -1,16 +1,51 @@
 .artist-detail{
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-.artist-detail > img{
-    position: relative;
-    max-width: 100%;
+    height: 250px;
+    padding: 10px;
+    background-color: #191414;
+    box-shadow: 
+        0 2px 2px 0 rgba(0, 0, 0, .14),
+        0 3px 1px -2px rgba(0, 0, 0, .2),
+        0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 .artist-detail .info{
-    color: white;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
+    padding: 8px;
+}
+.artist-detail .info > h2{
+    font-size: 2em;
+    margin-top: 0;
+    color: #1DB954;
+    border-bottom: white 1px solid;
+}
+.artist-detail .info .details{
+    color: white;
+}
+.artist-detail .info .details a{
+    color: white; 
+}
+.artist-detail .info .details a:hover{
+    color: #1DB954;
+}
+.artist-albums > h2,
+.artist-songs > h2{
+    align-self: center;
+    background-color: #1DB954;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    box-shadow: 
+        0 2px 2px 0 rgba(0, 0, 0, .14),
+        0 3px 1px -2px rgba(0, 0, 0, .2),
+        0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 .albums,
 .songs{

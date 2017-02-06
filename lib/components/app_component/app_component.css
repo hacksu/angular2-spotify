@@ -2,6 +2,7 @@ header{
     display: flex;
     align-items: center;
     padding: 8px;
+    margin-bottom: 20px;
     background-color: #1DB954;
     color: white;
     box-shadow: 
