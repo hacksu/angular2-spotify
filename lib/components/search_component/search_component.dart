@@ -36,4 +36,13 @@ class SearchComponent implements OnInit
       artists = await _spotifySearchService.search(fixedQuery);
     }
   }
+
+  void goToArtistDetail(Artist artist)
+  {
+    var link = [
+      'ArtistDetail',
+      {'id': artist.id}
+    ];
+    _router.navigate(link);
+  }
 }
