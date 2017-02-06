@@ -19,7 +19,8 @@
     <h2>Top Songs</h2>
     <ul class="songs">
         <li class="song" *ngFor="let song of songs">
-            {{song.name}}
+            <h3>{{song.name}}</h3>
+            <a href="{{song.url}}" target="_blank">Open in Spotify</a>
         </li>
     </ul>
 </section>
