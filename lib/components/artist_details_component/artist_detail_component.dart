@@ -4,8 +4,35 @@ import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
 import '../../models/artist.dart';
+import '../../models/album.dart';
+import '../../models/song.dart';
+import '../../services/spotify_artist_detail_service.dart';
 
-class ArtistDetailComponent extends Component
+@Component(
+  selector: 'artist-detail',
+  templateUrl: 'artist_detail_component.html',
+  styleUrls: const ['artist_detail_component.css'],
+  providers: const [SpotifyArtistDetailService]
+)
+
+class ArtistDetailComponent implements OnInit
 {
+  Artist artist;
+  List<Album> albums;
+  List<Song> songs;
 
+  final SpotifyArtistDetailService _spotifyArtistDetailService;
+  final RouteParams _routeParams;
+  final Location _location;
+
+  ArtistDetailComponent(this._spotifyArtistDetailService, this._routeParams, this._location);
+
+  @override
+  Future<Null> ngOnInit() async
+  {
+    var _id = _routeParams.get('id');
+    artist = await _spotifyArtistDetailService.getArtistInfo(_id);
+    albums = await _spotifyArtistDetailService.getArtistAlbums(_id);
+    songs = await _spotifyArtistDetailService.getArtistTopSongs(_id);
+  }
 }
