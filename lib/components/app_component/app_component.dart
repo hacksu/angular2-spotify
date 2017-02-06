@@ -1,6 +1,7 @@
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
+import '../artist_details_component/artist_details_component.dart';
 import '../search_component/search_component.dart';
 
 @Component(
@@ -17,6 +18,11 @@ import '../search_component/search_component.dart';
     name: 'Search',
     component: SearchComponent,
     useAsDefault: true
+  ),
+  const Route(
+    path: '/artist/:id',
+    name: 'ArtistDetails',
+    component: ArtistDetailsComponent
   )
 ])
 
