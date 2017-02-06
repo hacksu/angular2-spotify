@@ -9,13 +9,13 @@ import '../models/album.dart';
 import '../models/song.dart';
 
 @Injectable()
-class SpotifySearchService
+class SpotifyArtistDetailService
 {
   static const _searchUrlPrefix = "https://api.spotify.com/v1/artists/";
 
   final Client _http;
 
-  SpotifySearchService(this._http);
+  SpotifyArtistDetailService(this._http);
 
   Future<Artist> getArtistInfo(String id) async
   {
