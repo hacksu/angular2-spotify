@@ -9,7 +9,7 @@
 }
 .albums .album{
     display: flex;
-    height: 50px;
+    height: 100px;
     width: 49.5%;
     padding: 8px;
     margin-bottom: 10px;
