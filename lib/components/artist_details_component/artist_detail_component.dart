@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
+import 'package:angular2/platform/common.dart';
 
 import '../../models/artist.dart';
 import '../../models/album.dart';
@@ -35,4 +36,6 @@ class ArtistDetailComponent implements OnInit
     albums = await _spotifyArtistDetailService.getArtistAlbums(_id);
     songs = await _spotifyArtistDetailService.getArtistTopSongs(_id);
   }
+
+  void goBack() => _location.back();
 }
