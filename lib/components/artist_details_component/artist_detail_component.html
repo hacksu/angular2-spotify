@@ -1,10 +1,17 @@
-<div *ngIf="artist != null">
+<section *ngIf="artist != null">
     {{artist.name}}
-</div>
-<div *ngIf="albums.length != 0">
+</section>
+<section *ngIf="albums != null">
     <ul>
         <li *ngFor="let album of albums">
             {{album.name}}
         </li>
     </ul>
-</div>
+</section>
+<section *ngIf="songs != null">
+    <ul>
+        <li *ngFor="let song of songs">
+            {{song.name}}
+        </li>
+    </ul>
+</section>

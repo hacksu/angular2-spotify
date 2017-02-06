@@ -40,7 +40,6 @@ class SpotifyArtistDetailService
     try
     {
       final response = await _http.get(url);
-      print(response.body);
       final albums = WebRequestHelper.extractAlbums(response)
         .map((value) => new Album.fromJson(value))
         .toList();

@@ -4,7 +4,7 @@ class JsonHelper
   {
     var images = object['images'];
     var imageUrl = '';
-    if(images.length != 0)
+    if(images != null && images.length != 0)
     {
       imageUrl = images[0]['url'];
     }
