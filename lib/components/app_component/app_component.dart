@@ -1,7 +1,7 @@
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
-import '../artist_details_component/artist_detail_component.dart';
+import '../artist_detail_component/artist_detail_component.dart';
 import '../search_component/search_component.dart';
 
 @Component(
