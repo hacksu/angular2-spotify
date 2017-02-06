@@ -83,8 +83,17 @@
 .albums .album .info{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex-grow: 1;
     margin-left: 8px;
+}
+.albums .album .info > div{
+    display: flex;
+}
+.albums .album .info .album-artists{
+    display: flex;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 .songs .song{
     height: 75px;
