@@ -1,16 +1,24 @@
 <section *ngIf="artist != null">
-    {{artist.name}}
+    <h2>{{artist.name}}</h2>
 </section>
 <section *ngIf="albums != null">
-    <ul>
-        <li *ngFor="let album of albums">
-            {{album.name}}
+    <h2>Albums</h2>
+    <ul class="albums">
+        <li class="album" *ngFor="let album of albums">
+            <img src="{{album.imageUrl}}" />
+            <div class="info">
+                <h3>{{album.name}}</h3>
+                <div class="details">
+                    <a href="{{artist.url}}" target="_blank">Open in Spotify</a>
+                </div>
+            </div>
         </li>
     </ul>
 </section>
 <section *ngIf="songs != null">
-    <ul>
-        <li *ngFor="let song of songs">
+    <h2>Top Songs</h2>
+    <ul class="songs">
+        <li class="song" *ngFor="let song of songs">
             {{song.name}}
         </li>
     </ul>

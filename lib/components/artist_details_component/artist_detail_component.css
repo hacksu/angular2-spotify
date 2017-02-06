@@ -1,0 +1,29 @@
+.albums,
+.songs{
+    padding: 0;
+}
+.albums{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.albums .album{
+    display: flex;
+    height: 50px;
+    width: 49.5%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-shadow: 
+        0 2px 2px 0 rgba(0, 0, 0, .14),
+        0 3px 1px -2px rgba(0, 0, 0, .2),
+        0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+.albums .album .info{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 8px;
+}
+.albums .album .info > h3{
+    margin: 0;
+}
