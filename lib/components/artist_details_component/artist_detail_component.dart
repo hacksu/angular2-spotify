@@ -34,7 +34,7 @@ class ArtistDetailComponent implements OnInit
     var _id = _routeParams.get('id');
     artist = await _spotifyArtistDetailService.getArtistInfo(_id);
     albums = await _spotifyArtistDetailService.getArtistAlbums(_id);
-    songs = await _spotifyArtistDetailService.getArtistTopSongs(_id);
+    // songs = await _spotifyArtistDetailService.getArtistTopSongs(_id);
   }
 
   void goBack() => _location.back();

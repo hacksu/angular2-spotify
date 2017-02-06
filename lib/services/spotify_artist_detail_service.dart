@@ -35,11 +35,12 @@ class SpotifyArtistDetailService
 
   Future<List<Album>> getArtistAlbums(String id) async
   {
-    var url = _searchUrlPrefix + id + "/albums?offset=0&limit=20&album_type=album";
+    var url = _searchUrlPrefix + id + "/albums";
 
     try
     {
       final response = await _http.get(url);
+      print(response.body);
       final albums = WebRequestHelper.extractAlbums(response)
         .map((value) => new Album.fromJson(value))
         .toList();

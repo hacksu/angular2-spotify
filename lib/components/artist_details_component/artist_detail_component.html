@@ -1,0 +1,10 @@
+<div *ngIf="artist != null">
+    {{artist.name}}
+</div>
+<div *ngIf="albums.length != 0">
+    <ul>
+        <li *ngFor="let album of albums">
+            {{album.name}}
+        </li>
+    </ul>
+</div>
