@@ -5,7 +5,10 @@
             <h2>{{artist.name}}</h2>
             <div class="details">
                 <div><b>Followers:</b> {{artist.followers | number}}</div>
-                <a href="{{artist.url}}" target="_blank">Open in Spotify</a>
+                <a href="{{artist.url}}" target="_blank">
+                    <i class="fa fa-spotify"></i>
+                    Open in Spotify
+                </a>
                 <button (click)="goBack()">Back</button>
             </div>
         </div>
@@ -19,7 +22,10 @@
                 <img src="{{album.imageUrl}}" />
                 <div class="info">
                     <h3>{{album.name}}</h3>
-                    <a href="{{album.url}}" target="_blank">Open in Spotify</a>
+                    <a href="{{album.url}}" target="_blank">
+                        <i class="fa fa-spotify"></i>
+                        Open in Spotify
+                    </a>
                 </div>
             </li>
         </ul>

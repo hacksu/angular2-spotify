@@ -26,10 +26,10 @@
     color: white;
 }
 .artist-detail .info .details a{
-    color: white; 
+    color: #1DB954; 
 }
 .artist-detail .info .details a:hover{
-    color: #1DB954;
+    color: white;
 }
 .artist-albums > h2,
 .artist-songs > h2{
