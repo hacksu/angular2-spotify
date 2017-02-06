@@ -16,4 +16,16 @@ class JsonHelper
     var externalUrl = object['external_urls']['spotify'].toString();
     return externalUrl.replaceFirst("open", "play");
   }
+
+  static List<String> getArtistNames(dynamic object)
+  {
+    var artistNames = new List<String>();
+    var artistsInfoArray = object['artists'];
+    for(var artistInfo in artistsInfoArray)
+    {
+      var artistName = artistInfo['name'].toString();
+      artistNames.add(artistName.trim());
+    }
+    return artistNames;
+  }
 }
