@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'package:angular2/core.dart';
 import 'package:http/http.dart';
 
+import '../helpers/web_request_helper.dart';
 import '../models/artist.dart';
 
 @Injectable()
@@ -23,21 +23,14 @@ class SpotifySearchService
     try
     {
       final response = await _http.get(url);
-      final artists = _extractData(response)
+      final artists = WebRequestHelper.extractArtists(response)
         .map((value) => new Artist.fromJson(value))
         .toList();
       return artists;
     }
     catch(e)
     {
-      throw _handleError(e);
+      throw WebRequestHelper.handleError(e);
     }
-    
   }
-}
-
-dynamic _extractData(Response resp) => JSON.decode(resp.body)['artists']['items'];
-  
-Exception _handleError(dynamic e) {
-  return new Exception('Server error; cause: $e');
 }
