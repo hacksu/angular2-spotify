@@ -5,7 +5,7 @@ import 'package:angular2/router.dart';
 
 import '../../models/artist.dart';
 
-class ArtistDetailsComponent extends Component
+class ArtistDetailComponent extends Component
 {
 
 }
