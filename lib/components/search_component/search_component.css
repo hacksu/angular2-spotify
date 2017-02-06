@@ -36,11 +36,15 @@
         0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 .results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 0;
 }
-.result{
+.results .result{
     display: flex;
     height: 150px;
+    width: 49.5%;
     padding: 8px;
     margin-bottom: 10px;
     box-shadow: 
@@ -48,20 +52,20 @@
         0 3px 1px -2px rgba(0, 0, 0, .2),
         0 1px 5px 0 rgba(0, 0, 0, .12);
 }
-.result img{
+.results .result img{
     max-height: 100%;
 }
-.result a{
+.results .result a{
     color: #1DB954;
 }
-.result .info{
+.results .result .info{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     margin-left: 8px;
 }
 
-.result .info h3{
+.results .result .info h3{
     font-size: 1.25em;
     align-self: center;
     background-color: #1DB954;
