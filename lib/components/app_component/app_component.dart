@@ -12,21 +12,7 @@ import '../search_component/search_component.dart';
   providers: const [ROUTER_PROVIDERS]
 )
 
-@RouteConfig(const [
-  const Route(
-    path: '/',
-    name: 'Search',
-    component: SearchComponent,
-    useAsDefault: true
-  ),
-  const Route(
-    path: '/artist/:id',
-    name: 'ArtistDetail',
-    component: ArtistDetailComponent
-  )
-])
-
 class AppComponent 
 {
-  String title = 'Angular 2 Spotify';
+  
 }
