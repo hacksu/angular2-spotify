@@ -21,8 +21,11 @@
                 </a>
             </div>
         </div>
+        <button class="back" (click)="goBack()">
+            <i class="fa fa-arrow-left"></i>
+            <span>Back</span>
+        </button> 
     </div>
-    <button (click)="goBack()">Back</button>
 </section>
 <section *ngIf="albums != null">
     <div class="artist-albums">
