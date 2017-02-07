@@ -15,11 +15,16 @@
                     <h3>{{artist.name}}</h3>
                     <div class="details">
                         <div><b>Followers:</b> {{artist.followers | number}}</div>
-                        <a href="{{artist.url}}" target="_blank">
-                            <i class="fa fa-spotify"></i>
-                            Open in Spotify
-                        </a>
-                        <button (click)="goToArtistDetail(artist)">More Info</button>
+                        <div class="actions">
+                            <a href="{{artist.url}}" target="_blank">
+                                <i class="fa fa-spotify"></i>
+                                <span>Open in Spotify</span>
+                            </a>
+                            <button class="more-info" (click)="goToArtistDetail(artist)">
+                                <span>More Info</span>
+                                <i class="fa fa-info"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </li>

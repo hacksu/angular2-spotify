@@ -47,16 +47,11 @@
     width: 49.5%;
     padding: 8px;
     margin-bottom: 10px;
+    background-color: white;
     box-shadow: 
         0 2px 2px 0 rgba(0, 0, 0, .14),
         0 3px 1px -2px rgba(0, 0, 0, .2),
         0 1px 5px 0 rgba(0, 0, 0, .12);
-}
-.results .result a{
-    color: #1DB954;
-}
-.results .result a:hover{
-    color: #191414;
 }
 .results .result .info{
     display: flex;
@@ -79,4 +74,31 @@
         0 2px 2px 0 rgba(0, 0, 0, .14),
         0 3px 1px -2px rgba(0, 0, 0, .2),
         0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+.results .result .info .details{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.results .result .info .details .actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.results .result .info .details .actions a{
+    color: #1DB954;
+}
+.results .result .info .details .actions a:hover{
+    color: #191414;
+}
+.results .result .info .details .actions .more-info{
+    border: none;
+    font-size: 1em;
+    color: #1DB954;
+    background-color: white;
+    padding: 5px;
+}
+.results .result .info .details .actions .more-info:hover{
+    color: #191414;
 }
