@@ -26,6 +26,7 @@ import '../search_component/search_component.dart';
   )
 ])
 
-class AppComponent {
+class AppComponent 
+{
   String title = 'Angular 2 Spotify';
 }
