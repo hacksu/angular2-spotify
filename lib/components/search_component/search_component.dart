@@ -17,11 +17,6 @@ class SearchComponent implements OnInit
 {
   List<Artist> artists;
 
-  final SpotifySearchService _spotifySearchService;
-  final Router _router;  
-
-  SearchComponent(this._spotifySearchService, this._router);
-
   @override
   Future<Null> ngOnInit() async
   {
@@ -30,19 +25,11 @@ class SearchComponent implements OnInit
 
   Future<Null> search(String query) async
   {
-    if(query.isNotEmpty)
-    {
-      var fixedQuery = query.replaceAll(" ", "+");
-      artists = await _spotifySearchService.search(fixedQuery);
-    }
+    
   }
 
   void goToArtistDetail(Artist artist)
   {
-    var link = [
-      'ArtistDetail',
-      {'id': artist.id}
-    ];
-    _router.navigate(link);
+    
   }
 }
