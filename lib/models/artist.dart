@@ -13,12 +13,13 @@ class Artist
 
   factory Artist.fromJson(Map<String, dynamic> artist)
   {
+    var genres = JsonHelper.getGenres(artist);
     var externalUrl = JsonHelper.getExternalUrl(artist);
     var imageUrl = JsonHelper.getImageUrl(artist);
     
     return new Artist(artist['id'], 
                artist['name'], 
-               artist['genres'], 
+               genres, 
                artist['followers']['total'], 
                externalUrl,
                imageUrl);

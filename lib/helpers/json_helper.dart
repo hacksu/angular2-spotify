@@ -24,8 +24,20 @@ class JsonHelper
     for(var artistInfo in artistsInfoArray)
     {
       var artistName = artistInfo['name'].toString();
-      artistNames.add(artistName.trim());
+      artistNames.add(artistName);
     }
     return artistNames;
+  }
+
+  static List<String> getGenres(dynamic object)
+  {
+    var genres = new List<String>();
+    var genresArray = object['genres'];
+    for(var genre in genresArray)
+    {
+      var capitalizedGenre = genre[0].toUpperCase() + genre.substring(1);
+      genres.add(capitalizedGenre);
+    }
+    return genres;
   }
 }
