@@ -8,14 +8,21 @@
                     <b>Followers:</b> 
                     <span>{{artist.followers | number}}</span>
                 </div>
+                <div class="artist-genres">
+                    <b>Genres: </b> 
+                    <span class="artist-genre" *ngFor="let genre of artist.genres">
+                        <span>{{genre}}</span>
+                        <span *ngIf="genre != artist.genres.last">,</span>
+                    </span>
+                </div>
                 <a href="{{artist.url}}" target="_blank">
                     <i class="fa fa-spotify"></i>
                     Open in Spotify
                 </a>
-                <button (click)="goBack()">Back</button>
             </div>
         </div>
     </div>
+    <button (click)="goBack()">Back</button>
 </section>
 <section *ngIf="albums != null">
     <div class="artist-albums">
@@ -25,11 +32,11 @@
                 <img src="{{album.imageUrl}}" />
                 <div class="info">
                     <h3>{{album.name}}</h3>
-                    <div>
-                        <b>Artists:</b> 
-                        <span class="album-artists" *ngFor="let artistName of album.artistNames">
+                    <div class="album-artists">
+                        <b>Artists: </b> 
+                        <span class="album-artist" *ngFor="let artistName of album.artistNames">
                             <span>{{artistName}}</span>
-                            <span *ngIf="artistName != album.artistNames.last">, </span>
+                            <span *ngIf="artistName != album.artistNames.last">,</span>
                         </span>
                     </div>
                     <a href="{{album.url}}" target="_blank">
