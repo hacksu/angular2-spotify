@@ -1,12 +1,10 @@
+import '../helpers/web_request_helper.dart';
+import '../models/album.dart';
+import '../models/artist.dart';
+import '../models/song.dart';
 import 'dart:async';
-
 import 'package:angular2/core.dart';
 import 'package:http/http.dart';
-
-import '../helpers/web_request_helper.dart';
-import '../models/artist.dart';
-import '../models/album.dart';
-import '../models/song.dart';
 
 @Injectable()
 class SpotifyArtistDetailService

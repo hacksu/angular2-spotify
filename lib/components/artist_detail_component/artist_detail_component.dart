@@ -1,13 +1,11 @@
+import '../../models/album.dart';
+import '../../models/artist.dart';
+import '../../models/song.dart';
+import '../../services/spotify_artist_detail_service.dart';
 import 'dart:async';
-
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 import 'package:angular2/platform/common.dart';
-
-import '../../models/artist.dart';
-import '../../models/album.dart';
-import '../../models/song.dart';
-import '../../services/spotify_artist_detail_service.dart';
 
 @Component(
   selector: 'artist-detail',

@@ -1,10 +1,8 @@
-import 'dart:async';
-
-import 'package:angular2/core.dart';
-import 'package:angular2/router.dart';
-
 import '../../models/artist.dart';
 import '../../services/spotify_search_service.dart';
+import 'dart:async';
+import 'package:angular2/core.dart';
+import 'package:angular2/router.dart';
 
 @Component(
   selector: 'search',

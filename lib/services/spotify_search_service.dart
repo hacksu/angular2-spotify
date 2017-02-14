@@ -1,10 +1,8 @@
-import 'dart:async';
-
-import 'package:angular2/core.dart';
-import 'package:http/http.dart';
-
 import '../helpers/web_request_helper.dart';
 import '../models/artist.dart';
+import 'dart:async';
+import 'package:angular2/core.dart';
+import 'package:http/http.dart';
 
 @Injectable()
 class SpotifySearchService
