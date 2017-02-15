@@ -12,7 +12,7 @@ Have fun with Dart because it's objectively an awesome language.
 
 ## Getting Started
 1. [Install Dart](https://www.dartlang.org/install)
-2. Clone the `master` branch of this repository (should be the main branch)
+2. Download and unzip ["Start of Talk" Release](https://github.com/hacksu/angular2-spotify/releases/tag/v0.1)
 3. Run the following commands in the root of the repository  
    ```
     pub get
@@ -23,4 +23,4 @@ Have fun with Dart because it's objectively an awesome language.
 
 You should now have a pretty boring page with some text displaying.
 
-Feel free to checkout the `release` branch to see what this project looks like completed.
+Cloning this repository should give you the finalized project to mess around with.
